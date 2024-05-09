@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="">
+<title>Xin chào bạn</title>
+<link rel="stylesheet" href="/static/css/login.css" type="text/css">
+</head>
+
+<body style="background-color: darkgray;">
+      <div class="wrapper">
+         <div class="title-text">
+            <div class="title login">
+               Đăng nhập
+            </div>
+            <div class="title signup">
+              Đăng kí
+            </div>
+         </div>
+         <div class="form-container">
+            <div class="slide-controls">
+               <input type="radio" name="slide" id="login" checked>
+               <input type="radio" name="slide" id="signup">
+               <label for="login" class="slide login">Đăng nhập</label>
+               <label for="signup" class="slide signup">Đăng kí</label>
+               <div class="slider-tab"></div>
+            </div>
+            <div class="form-inner">
+               <form action="#" class="login">
+                  <div class="field">
+                     <input type="text" placeholder="Tên tài khoản" required>
+                  </div>
+                  <div class="field">
+                     <input type="password" placeholder="Mật khẩu" required>
+                  </div>
+                  <div class="pass-link">
+                     <a href="#">Quên mật khẩu?</a>
+                  </div>
+                  <div class="field btn">
+                     <div class="btn-layer"></div>
+                     <input type="submit" value="Login">
+                  </div>
+                  <div class="signup-link">
+                     Bạn đã có tài khoản? <a href="">Đăng kí ngay</a>
+                  </div>
+               </form>
+               
+               
+               <form th:action="@{/process_register}" method="post"class="signup" th:object="${cus}" >
+                  <div class="field">
+                     <input type="text" placeholder="Nhập tên tài khoản" th:field="*{username}" required>
+                  </div>
+                  <div class="field">
+                     <input type="password" placeholder="Nhập mật khẩu" th:field="*{password}"required>
+                  </div>
+                  <div class="field">
+                     <input type="email" placeholder="Nhập email xác thực" th:field="*{email}" required>
+                  </div>
+                  <div class="field btn">
+                     <div class="btn-layer"></div>
+                     <input type="submit" value="Signup">
+                  </div>
+               </form>
+
+               <!-- <form th:action="@{/process_forgotpass}" method="post"class="forgot" th:object="${2}" >
+                  <div class="field">
+                     <input type="text" placeholder="Username" th:field="*{username}" required>
+                  </div>
+                  <div class="field">
+                     <input type="email" placeholder="Nhập email xác thực" th:field="*{gmail}" required>
+                  </div>
+                  <div class="field btn">
+                     <div class="btn-layer"></div>
+                     <input type="submit" value="Xác nhận">
+                  </div>
+               </form> -->
+            </div>
+         </div>
+      </div>
+      <script>
+         const loginText = document.querySelector(".title-text .login");
+         const loginForm = document.querySelector("form.login");
+         const loginBtn = document.querySelector("label.login");
+         const signupBtn = document.querySelector("label.signup");
+         const signupLink = document.querySelector("form .signup-link a");
+         const loginIp = document.querySelector("form .btn");
+         const forgotPass = document.querySelector("form .pass-link a");
+         signupBtn.onclick = (()=>{
+           loginForm.style.marginLeft = "-50%";
+           loginText.style.marginLeft = "-50%";
+         });
+         loginBtn.onclick = (()=>{
+           loginForm.style.marginLeft = "0%";
+           loginText.style.marginLeft = "0%";
+
+         });
+         signupLink.onclick = (()=>{
+           signupBtn.click();
+           return false;
+         });
+         //Đăng nhập 
+         loginIp.onclick = (()=>{
+           window.location.href = "./Home.html"
+         });
+         forgotPass.onclick =(()=>{
+            window.location.href = "./forgot_pass.html"
+         });
+      </script>
+   </body>
+</html>

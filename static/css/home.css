@@ -1,0 +1,22 @@
+.nav-item{
+    background-color: #2d9fd8;
+    border-block: inherit;
+    border-radius: .25rem;
+}
+.nav-link{
+    color: white;
+}
+.line {
+    flex: 0.01;
+    height: 1px;
+    background-color: rgb(184, 181, 181);
+}
+.h2{
+    min-height: 80px;
+    justify-content: center;
+    align-items: center;
+    /* text-align: center; */
+    display: flex;
+    background-color: #2d9fd8;
+    border-radius: .25rem;
+}

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="">
+<title>Xin chào bạn</title>
+<link rel="stylesheet" href="/static/css/login.css" type="text/css">
+</head>
+
+<body style="background-color: darkgray;">
+      <div class="wrapper">
+         <div class="title-text">
+            <div class="title login">
+               Quên mật khẩu
+            </div>
+         </div>
+         <div class="form-container">
+            <div class="slide-controls-forgot">
+              
+            </div>
+            <div class="form-inner">
+               <form action="#" class="login">
+                  <div class="field">
+                     <input type="text" placeholder="Nhập tên tài khoản" required>
+                  </div>
+                  <div class="field">
+                     <input type="email" placeholder="Nhập email xác thực" required>
+                  </div>
+                  
+                  <div class="field btn">
+                     <div class="btn-layer"></div>
+                     <input type="submit" value="Xác nhận">
+                  </div>
+                 
+               </form>
+               
+               
+             
+
+            </div>  
+         </div>
+      </div>
+      <script>
+        document.addEventListener("DOMContentLoaded", function() {
+    const form = document.querySelector(".form-inner form");
+    const emailInput = form.querySelector('input[type="email"]');
+    const confirmButton = form.querySelector('input[type="submit"]');
+    
+    form.addEventListener("submit", function(event) {
+        const emailValue = emailInput.value.trim();
+        
+        // Kiểm tra xem trường nhập liệu email có hợp lệ hay không.
+        if (!isValidEmail(emailValue)) {
+            // Nếu không hợp lệ, ngăn chặn hành động mặc định của form.
+            event.preventDefault();
+            // Thông báo cho người dùng nhập lại email hợp lệ.
+            alert("Vui lòng nhập địa chỉ email xác nhận hợp lệ.");
+        }
+        else{
+            window.location.href = "./pass-authentication.html"
+        }
+    });
+    
+    // Hàm kiểm tra xem một địa chỉ email có hợp lệ hay không.
+    function isValidEmail(email) {
+        // Sử dụng một biểu thức chính quy để kiểm tra định dạng email.
+        const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return emailPattern.test(email);
+    }
+});
+
+       
+      </script>
+   </body>
+</html>

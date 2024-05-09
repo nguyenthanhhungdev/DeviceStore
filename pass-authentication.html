@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="">
+<title>Xin chào bạn</title>
+<link rel="stylesheet" href="/static/css/login.css" type="text/css">
+</head>
+
+<body style="background-color: darkgray;">
+      <div class="wrapper">
+         <div class="title-text">
+            <div class="title login">
+               Forgot Password
+            </div>
+         </div>
+         <div class="form-container">
+            <div class="slide-controls-forgot">
+              
+            </div>
+            <div class="form-inner">
+               <form action="#" class="login">
+                  <div class="field">
+                     <input type="password" placeholder="Enter a new password" required>
+                  </div>
+                  <div class="field">
+                     <input type="password" placeholder="Enter the new password again" required>
+                  </div>
+                  
+                  <div class="field btn">
+                     <div class="btn-layer"></div>
+                     <input type="submit" value="Confirm">
+                  </div>
+                 
+               </form>
+               
+               
+             
+
+            </div>
+         </div>
+      </div>
+      <script>
+      document.addEventListener("DOMContentLoaded", function() {
+    const form = document.querySelector(".form-inner form");
+    const passwordInput = form.querySelectorAll('input[type="password"]');
+    const confirmButton = form.querySelector('input[type="submit"]');
+    
+    form.addEventListener("submit", function(event) {
+        event.preventDefault(); // Ngăn chặn hành động mặc định của form (nếu có).
+        
+        const password1 = passwordInput[0].value.trim();
+        const password2 = passwordInput[1].value.trim();
+        
+        // Kiểm tra xem hai giá trị của hai trường nhập liệu có giống nhau không.
+        if (password1 === password2) {
+            // Nếu giống nhau, chuyển hướng đến trang tiếp theo.
+            window.location.href = "./login.html"; // Thay "ten-trang-tiep-theo.html" bằng đường dẫn của trang tiếp theo bạn muốn chuyển hướng đến.
+        } else {
+            // Nếu không giống nhau, thông báo cho người dùng.
+            alert("Passwords do not match. Please try again.");
+        }
+    });
+});
+
+
+       
+      </script>
+   </body>
+</html>

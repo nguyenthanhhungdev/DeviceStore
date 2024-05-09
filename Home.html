@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="">
+<title>Xin chào bạn</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+<link rel="stylesheet" href="/static/css/home.css">
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script></head>
+
+<body style="background-color: rgb(203, 199, 199);">
+    <div class="container mt-3" style="padding: 20px;
+    border-radius: 5px;
+    background-color: rgb(184, 181, 181);
+    min-height: 750px;"> 
+        <div class="h2">  
+            <h2>HỒ SƠ THÀNH VIÊN </h2>  
+          </div>
+        <ul class="nav nav-tabs nav-justified">
+          <li class="nav-item" >
+            <a class="nav-link active" data-toggle="tab" href="#menu1">Thông tin thành viên</a>
+          </li>
+          <div class="line"></div>
+          <li class="nav-item">
+            <a class="nav-link" data-toggle="tab" href="#menu2">Dịch vụ</a>
+          </li>
+        </ul>
+
+        
+        <div class="tab-content">
+
+                    <!-- Phan thong tin thanh vien -->
+
+            <div id="menu1" class="tab-pane active container" style="max-width: 500px;"><br>
+                <form action="">
+                    <div class="form-group">
+                      <label for="usr">Mã thành viên:</label>
+                      <input type="text" class="form-control" id="usr" name="username">
+                    </div>
+                    <div class="form-group">
+                      <label for="pwd">Họ tên thành viên:</label>
+                      <input type="password" class="form-control" id="pwd" name="password">
+                    </div>
+                    <div class="form-group">
+                      <label for="pwd">Khoa:</label>
+                      <input type="password" class="form-control" id="pwd" name="password">
+                    </div>
+                    <div class="form-group">
+                      <label for="pwd">Ngành:</label>
+                      <input type="password" class="form-control" id="pwd" name="password">
+                    </div>
+                    <div class="form-group">
+                      <label for="pwd">Email:</label>
+                      <input type="password" class="form-control" id="pwd" name="password">
+                    </div>
+                    <div class="form-group">
+                      <label for="pwd">Số điện thoại:</label>
+                      <input type="password" class="form-control" id="pwd" name="password">
+                    </div>
+                  </form>
+            </div>
+
+            <!-- Menu phan dich vu -->
+
+            <div id="menu2" class="tab-pane container"><br>
+                <ul class="nav nav-tabs" style="    justify-content: center;
+                align-items: center;">
+                    <li class="nav-item">
+                      <a class="nav-link active" data-toggle="tab" href="#menu21">Xem thông tin vi phạm</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" data-toggle="tab" href="#menu22">Xem đặt chỗ thiết bị</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" data-toggle="tab" href="#menu23">Xem thiết bị đang mượn</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" data-toggle="tab" href="#menu24">Đổi mật khẩu</a>
+                    </li>
+                  </ul>
+                  <!-- Tab panes -->
+                <div class="tab-content">
+
+                    <!-- Xem thông tin vi phạm -->
+                    <div id="menu21" class="container tab-pane active" style="max-width: 1000px;"><br>
+                        <table class="table table-bordered">
+                            <thead>
+                              <tr>
+                                <th>Số ngày trả muộn</th>
+                                <th>Số tiền phạt</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td>John</td>
+                                <td>Doe</td>
+                              </tr>
+                              <tr>
+                                <td>Mary</td>
+                                <td>Moe</td>
+                              </tr>
+                            
+                            </tbody>
+                          </table>
+                    </div>
+
+                    <!-- Xem đặt chỗ thiết bị -->
+                    <div id="menu22" class="container tab-pane fade" style="max-width: 1000px;"><br>
+                        <table class="table table-bordered">
+                            <thead>
+                              <tr>
+                                <th>Mã thiết bị</th>
+                                <th>Tên thiết bị</th>
+                                <th>Mô tả thiết bị</th>
+                                <th>Đã đặt</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td>John</td>
+                                <td>Doe</td>
+                                <td>acbadasdas</td>
+                                <td>có</td>
+                              </tr>
+                              <tr>
+                                <td>Mary</td>
+                                <td>Moe</td>
+                                <td>adasdasdasd</td>
+                                <td>chưa</td>
+                              </tr>
+                              <tr>
+                                <td>July</td>
+                                <td>Dooley</td>
+                                <td>adasdasdad</td>
+                                <td>có</td>
+                              </tr>
+                            
+                            </tbody>
+                          </table>
+                    </div>
+
+                    <!-- Xem thiết bị đang mượn -->
+                    <div id="menu23" class="container tab-pane fade" style="max-width: 1000px;"><br>
+                        <table class="table table-bordered">
+                            <thead>
+                              <tr>
+                                <th>Mã thiết bị</th>
+                                <th>Tên thiết bị</th>
+                                <th>Mô tả thiết bị</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td>John</td>
+                                <td>Doe</td>
+                                <td>acbadasdas</td>
+                              </tr>
+                              <tr>
+                                <td>Mary</td>
+                                <td>Moe</td>
+                                <td>adasdasdasd</td>
+                              </tr>
+                              <tr>
+                                <td>July</td>
+                                <td>Dooley</td>
+                                <td>adasdasdad</td>
+                              </tr>
+                            </tbody>
+                          </table>
+                    </div>
+
+                    <!-- Đổi mật khẩu -->
+                    <div id="menu24" class="container tab-pane fade" style="max-width: 500px;"><br>
+                        <form action="">
+                            <div class="form-group">
+                              <label for="email">Nhập email xác nhận:</label>
+                              <input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
+                            </div>
+                            <div class="form-group">
+                              <label for="pwd">Nhập mật khẩu cũ:</label>
+                              <input type="password" class="form-control" id="pwd" placeholder="Nhập mật khẩu cũ" name="pswd">
+                            </div>
+                            <div class="form-group">
+                              <label for="pwd">Nhập mật khẩu mới:</label>
+                              <input type="password" class="form-control" id="pwd" placeholder="Nhập mật khẩu mới" name="pswd">
+                            </div>
+                            <div class="form-group">
+                              <label for="pwd">Nhập lại mật khẩu mới:</label>
+                              <input type="password" class="form-control" id="pwd" placeholder="Nhập lại mật khẩu mới" name="pswd">
+                            </div>
+                            <div class="form-group form-check">
+                              <label class="form-check-label">
+                                <input class="form-check-input" type="checkbox" name="remember"> Remember me
+                              </label>
+                            </div>
+                            <button type="submit" class="btn btn-primary" style="background-color: #2d9fd8; border-color: #28a55f;">Submit</button>
+                          </form>
+                    </div>
+                </div>
+            </div>
+           
+          </div>
+      </div>
+   </body>
+
+</html>
